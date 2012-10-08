@@ -8,11 +8,10 @@
   <meta name="keywords" content="{{ page.meta_keywords }}" />
   <link href="/products.rss" rel="alternate" title="Products RSS Feed" type="application/rss+xml" />
   <link href="{{ theme | theme_css_url }}" media="screen" rel="Stylesheet" type="text/css" />
-  <script src="{{ 'prototype' | theme_js_url }}" type="text/javascript"></script>
-  <script src="{{ 'effects' | theme_js_url }}" type="text/javascript"></script>
-  <script src="{{ 'store' | theme_js_url }}" type="text/javascript"></script>
-  <script src="{{ 'fancyzoom' | theme_js_url }}" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.1/effects.js"></script>
   <script src="{{ 'api' | theme_js_url }}" type="text/javascript"></script>
+  <script src="{{ theme | theme_js_url }}" type="text/javascript"></script>
   <script type="text/javascript" charset="utf-8">
     Store.currency_sign  = "{{ store.currency.sign }}";
     Store.item_singular  = "item";

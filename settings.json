@@ -1,5 +1,9 @@
 {
   "name": "Blocks",
+  "javascripts": [
+    "fancyzoom",
+    "store"
+  ],
   "images": [
     {
       "variable": "image",
