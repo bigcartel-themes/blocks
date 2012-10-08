@@ -1,0 +1,68 @@
+{% if cart.items != blank %}
+
+<form id="cart_form" method="post" action="/cart">
+  <ul id="cart_contents" class="clearfix">
+    {% for item in cart.items %}<li id="item_{{ item.id }}" class="{% cycle 'row', 'row_alt' %}">
+      <div class="item_wrap">
+        <div class="thumbnail"><a href="{{ item.product.url }}" title="View {{ item.product.name | escape }}"><img src="{{ item.product.image | product_image_url size:"thumb" }}" /><span class="stilt"></span></a></div>
+        <div class="item_info">
+          <h2{% if item.product.has_default_option %} class="optionless"{% endif %}>{{ item.product.name }}</h2>
+          {% unless item.product.has_default_option %}<p>{{ item.option.name }}</p>{% endunless %}
+        </div>
+        <div class="item_qty">{{ item | item_quantity_input }}</div>
+        <div class="item_total" id="item_{{ item.id }}_total">{{ item.price | money_with_sign }}</div>
+        <div class="item_remove"><a href="#" class="btn_item_remove button" title="Remove item" onclick="Store.removeItem({{ item.id }}); return false">Remove</a></div>
+      </div>
+    </li>{% endfor %}
+  </ul>
+
+  {% if cart.discount.enabled %}
+  <div id="cart_discount" class="clearfix">
+    <h2>Discount:</h2>
+    {% if cart.discount.pending %}
+    <div id="discount_entry">{{ cart.discount | discount_code_input }}</div>
+    <div id="discount_total">optional</div>
+    {% elsif cart.discount.free_shipping %}
+    <div id="discount_entry" style="display:none"></div>
+    <div id="discount_total" class="shipping">{{ cart.discount.name }}</div>
+    {% else %}
+    <div id="discount_entry">{{ cart.discount.name }}</div>
+    <div id="discount_total">{{ cart.discount.amount | money_with_sign }}</div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if cart.shipping.enabled %}
+    <div id="cart_shipping" class="clearfix">
+      <h2>Shipping:</h2>
+      {% if cart.shipping.strict %}<div id="shipping_entry">{{ store.country | country_select }}</div>{% endif %}
+      <div id="shipping_total"{% if cart.shipping.pending %} style="display:none"{% endif %}>{{ cart.shipping.amount | money_with_sign }}</div>
+  </div>
+  {% endif %}
+
+  <div id="cart_update">
+    <button id="btn_update" class="button" name="update" type="submit" title="Update your cart total"><span>Update Total</span></button>
+  </div>
+
+  <noscript>
+    <style type="text/css">
+      #cart_update { display: block; }
+    </style>
+  </noscript>
+
+  <div class="cart_total" class="clearfix">
+    <h3 id="cart_price">{{ cart.total | money_with_sign }}</h3>
+    {% unless cart.shipping.enabled %}
+    <p>+ applicable shipping</p>
+    {% endunless %}
+    <button id="btn_checkout" class="button" name="checkout" type="submit" title="Checkout"><span>Checkout</span></button>
+  </div>
+
+</form>
+
+{% endif %}
+
+<div id="cart_empty"{% if cart.items != blank %} style="display:none"{% endif %}>
+  <h2>You don&#8217;t have any items in your cart.</h2>
+  <p>Sounds like a good time to <a href="/">start shopping</a>.</p>
+</div>
