@@ -1,5 +1,6 @@
 {
   "name": "Blocks",
+  "version": "1.0.0",
   "javascripts": [
     "fancyzoom",
     "store"
