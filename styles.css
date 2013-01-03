@@ -1420,7 +1420,7 @@ a:hover em.link_icon {
 
 /* Font */
 body
-{font-family: {{ theme.font | font_family_for_group }};}
+{font-family: {{ theme.font | font_family }};}
 
 
 /* Background */
