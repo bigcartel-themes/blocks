@@ -1,0 +1,141 @@
+{
+  "name": "Blocks",
+  "images": [
+    {
+      "variable": "image",
+      "label": "Logo",
+      "description": "Good for a logo up to 255 x 110 pixels"
+    },
+    {
+      "variable": "background_image",
+      "label": "Background Image",
+      "description": "Adds a repeating background image"
+    }
+  ],
+  "fonts": [
+    {
+      "variable": "font",
+      "label": "Font",
+      "default": "Helvetica"
+    }
+  ],
+  "colors": [
+    {
+      "variable": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "variable": "blocks_background",
+      "label": "Blocks background",
+      "default": "#eeeeee"
+    },
+    {
+      "variable": "blocks_links",
+      "label": "Blocks links",
+      "default": "#666666"
+    },
+    {
+      "variable": "main_block_background",
+      "label": "Main block background",
+      "default": "#333333"
+    },
+    {
+      "variable": "main_block_titles",
+      "label": "Main block titles",
+      "default": "#ffffff"
+    },
+    {
+      "variable": "main_block_text",
+      "label": "Main block text",
+      "default": "#999999"
+    },
+    {
+      "variable": "main_block_links",
+      "label": "Main block links",
+      "default": "#cccccc"
+    },
+    {
+      "variable": "main_block_lines",
+      "label": "Main block lines",
+      "default": "#4b4b4b"
+    },
+    {
+      "variable": "inner_blocks",
+      "label": "Inner blocks",
+      "default": "#222222"
+    },
+    {
+      "variable": "footer_titles",
+      "label": "Footer titles",
+      "default": "#666666"
+    },
+    {
+      "variable": "link_rollovers",
+      "label": "Link rollovers",
+      "default": "#00b8ed"
+    }
+  ],
+  "options": [
+    {
+      "variable": "featured_products",
+      "label": "Featured products",
+      "type": "select",
+      "options": "1..100",
+      "default": 17,
+      "description": "The number of products shown on the Home page"
+    },
+    {
+      "variable": "featured_order",
+      "label": "Featured products order",
+      "type": "select",
+      "options": "product_orders",
+      "default": "position",
+      "description": "The order of products on the Home page"
+    },
+    {
+      "variable": "products_per_page",
+      "label": "Products per page",
+      "type": "select",
+      "options": "1..100",
+      "default": 9,
+      "description": "The number of products shown at a time on the Products page"
+    },
+    {
+      "variable": "show_inventory_bars",
+      "label": "Show inventory bars",
+      "type": "boolean",
+      "default": false,
+      "description": "Shows a product's inventory amounts (when using inventory tracking)",
+      "requires": "inventory"
+    },
+    {
+      "variable": "show_search",
+      "label": "Show search",
+      "type": "boolean",
+      "default": false,
+      "description": "Shows the product search area"
+    },
+    {
+      "variable": "show_newest",
+      "label": "Show newest products",
+      "type": "boolean",
+      "default": false,
+      "description": "Shows a few of your newest products"
+    },
+    {
+      "variable": "show_top_selling",
+      "label": "Show top selling products",
+      "type": "boolean",
+      "default": false,
+      "description": "Shows a few of your top selling products"
+    },
+    {
+      "variable": "show_products_feed",
+      "label": "Show Product RSS feed",
+      "type": "boolean",
+      "default": false,
+      "description": "Shows a link to your product RSS feed"
+    }
+  ]
+}

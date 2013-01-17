@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>{{ store.name }} &mdash; {{ page.name }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta name="description" content="{{ page.meta_description }}" />
+  <meta name="keywords" content="{{ page.meta_keywords }}" />
+  <link href="/products.rss" rel="alternate" title="Products RSS Feed" type="application/rss+xml" />
+  <link href="{{ theme | theme_css_url }}" media="screen" rel="Stylesheet" type="text/css" />
+  <script src="{{ 'prototype' | theme_js_url }}" type="text/javascript"></script>
+  <script src="{{ 'effects' | theme_js_url }}" type="text/javascript"></script>
+  <script src="{{ 'store' | theme_js_url }}" type="text/javascript"></script>
+  <script src="{{ 'fancyzoom' | theme_js_url }}" type="text/javascript"></script>
+  <script src="{{ 'api' | theme_js_url }}" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8">
+    Store.currency_sign  = "{{ store.currency.sign }}";
+    Store.item_singular  = "item";
+    Store.item_plural  = "items";
+    Store.discount_off  = "% off";
+    Store.show_shipping = {{ cart.shipping.enabled }};
+  </script>
+  {{ head_content }}
+</head>
+
+<body id="{{ page.permalink }}" class="{{ page.category }}">
+
+  {% if store.website != blank %}
+  <div id="website">
+    <a href="{{ store.website }}" id="website_back" class="button" title="Back to Site">Back to Site</a>
+  </div>
+  {% endif %}
+
+  <div id="store" class="clearfix">
+
+    <div id="minicart">
+      <a href="/cart" title="View Cart"><span id="minicart_count">{{ cart.item_count | pluralize: 'item', 'items' }}</span> <span id="minicart_view">&raquo; view cart</span></a>
+    </div>
+
+    <div id="header">
+
+      <h2 id="logo" {% if theme.image != blank %}class="image"{% endif %}><a href="/" id="store_home" title="{{ store.name | escape }}"><span class="store_name">{{ store.name }}</span>{% if theme.image != blank %}<img src="{{ theme.image.url }}" />{% endif %}</a></h2>
+
+      {% if theme.show_search %}
+      <div id="search">
+      <form id="search_form" name="search" action="/products" method="get">
+        <input id="search_words" class="text" name="search" type="text" />
+        <button id="btn_search" class="button" name="btn_search" type="submit" title="Search"><span>Search</span></button>
+      </form>
+      </div>
+      {% endif %}
+
+      <ul id="nav">
+        <li class="first"><a href="/products" title="All Products">All</a></li>{% for category in categories.active limit:2 %}<li>{{ category | link_to }}</li>{% endfor %}
+      </ul>
+
+    </div>
+
+
+    <div id="main" class="clearfix">
+
+      <h1 id="page_name">{{ page.name }}</h1>
+
+      {% if errors != blank %}
+      <div id="error" class="error">
+        <ul>
+          {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if page.category == 'custom' %}
+      {{ page_content | paragraphs }}
+      {% else %}
+      {{ page_content }}
+      {% endif %}
+
+    </div>
+
+
+    <div id="footer">
+
+      <div id="pod_pages" class="pod">
+        <h4>Pages</h4>
+        <ul>
+          <li>{{ pages.home | link_to }}</li>{% for page in pages.all %}<li>{{ page | link_to }}</li>{% endfor %}<li>{{ pages.contact | link_to }}</li>
+        </ul>
+      </div>
+
+      <div id="pod_categories" class="pod">
+        <h4>Products</h4>
+        <ul>
+          <li class="first"><a href="/products" title="All Products">All</a></li>{% for category in categories.active %}<li>{{ category | link_to }}</li>{% endfor %}
+        </ul>
+      </div>
+
+      {% if artists.active != blank %}
+      <div id="pod_artists" class="pod">
+        <h4>Artists</h4>
+        <ul>
+          {% for artist in artists.active %}<li>{{ artist | link_to }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if theme.show_products_feed %}
+      <div id="pod_rss" class="pod">
+        <h4><a href="/products.rss" title="RSS Feed"><em class="link_icon"></em>Grab our feed</a></h4>
+        <p>Hear about new products with our <a href="/products.rss" title="Product RSS Feed"><span>Product RSS Feed</span></a>.</p>
+      </div>
+      {% endif %}
+
+    </div>
+
+    <div id="badge"><a href="http://bigcartel.com" title="Check out Big Cartel">Powered by Big Cartel</a></div>
+
+  </div>
+
+</body>
+</html>
