@@ -1,0 +1,61 @@
+/*============================================================
+ Contact
+============================================================*/
+
+#contact_form {
+  float: left;
+  padding: 15px 0;
+  }
+
+#contact_form dl {
+  float: left;
+  margin: 0;
+  padding: 0;
+  }
+
+#contact_form dt {
+  clear: both;
+  float: left;
+  width: 129px;
+  margin: 0;
+  padding: 10px 0 7px 0;
+  }
+
+#contact_form dt label {
+  font-size: 12px;
+  color: #fff;
+  }
+
+#contact_form dd {
+  float: left;
+  width: 435px;
+  margin: 0;
+  padding: 6px 0;
+  border-top: 1px solid #4b4b4b;
+  }
+
+#contact_form input {
+  width: 204px;
+  }
+
+#contact_form textarea {
+  width: 333px;
+  height: 100px;
+  }
+
+#captcha_area img {
+  margin: 1px 295px 6px 1px;
+  }
+
+#captcha {
+  margin-bottom: 7px;
+  }
+
+#btn_contact_send {
+  clear: both;
+  float: left;
+  display: inline;
+  margin-top: 15px;
+  margin-left: 129px;
+  }
+

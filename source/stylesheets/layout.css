@@ -1,0 +1,722 @@
+/*------------------------------------------------------------
+
+  _|_|_|    _|          _|_|      _|_|_|  _|    _|    _|_|_|
+  _|    _|  _|        _|    _|  _|        _|  _|    _|
+  _|_|_|    _|        _|    _|  _|        _|_|        _|_|
+  _|    _|  _|        _|    _|  _|        _|  _|          _|
+  _|_|_|    _|_|_|_|    _|_|      _|_|_|  _|    _|  _|_|_|
+
+  ----------------------------------------------------------
+
+  Theme:   Blocks
+  Author:  Big Cartel
+           http://bigcartel.com
+
+           Big Cartel Stores CSS
+           Copyright 2008 Big Cartel LLC.
+           More info at: http://bigcartel.com
+
+------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+  }
+
+ol, ul {
+  list-style: none;
+  }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  }
+
+blockquote, q {
+  quotes: "" "";
+  }
+
+
+
+/*============================================================
+ Base
+============================================================*/
+
+body {
+  position: relative;
+  background: #fff;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #666;
+  line-height: 1.4em;
+  text-align: center;
+  }
+
+h1, h2, h3 {
+  margin-bottom: 1.5em;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1em;
+  }
+
+p {
+  margin-bottom: 1em;
+  }
+
+p.instruction {
+  font-size: 11px;
+  font-style: italic;
+  }
+
+strong {
+  font-weight: bold;
+  }
+
+em {
+  font-style: italic;
+  }
+
+input, textarea {
+  margin: 0;
+  padding: 2px;
+  font-size: 11px;
+  }
+
+select {
+  padding: 1px;
+  font-size: 11px;
+  }
+
+a {
+  text-decoration: none;
+  color: #666;
+  }
+
+a:hover {
+  color: #00B8ED;
+  }
+
+a img {
+  display: block;
+  text-decoration: none;
+  }
+
+img {
+  -ms-interpolation-mode:bicubic;
+  }
+
+
+
+/*============================================================
+ Buttons
+============================================================*/
+
+.button {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border: none;
+  text-indent: -5000px;
+  }
+
+.button:hover {
+  background-position: 0 -16px;
+  }
+
+button.button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  }
+
+
+/* Specific Buttons
+------------------------------------------------------------*/
+
+a#website_back {
+  width: 43px;
+  height: 32px;
+  background-image: url(../images/btn_website.png);
+  }
+
+a#website_back:hover {
+  background-position: 0 -32px;
+  }
+
+button#btn_search {
+  background-image: url(../images/btn_search.png);
+  }
+
+button#btn_product_buy {
+  width: 75px;
+  height: 28px;
+  background-image: url(../images/btn_add_to_cart.png);
+  }
+
+button#btn_product_buy:hover {
+  background-position: 0 -28px;
+  }
+
+button#btn_contact_send {
+  width: 75px;
+  height: 31px;
+  background-image: url(../images/btn_send.png);
+  }
+
+button#btn_checkout {
+  width: 104px;
+  height: 31px;
+  background-image: url(../images/btn_checkout.png);
+  }
+
+button#btn_contact_send:hover,
+button#btn_checkout:hover {
+  background-position: 0 -31px;
+  }
+
+button#btn_update {
+  width: 104px;
+  height: 25px;
+  background-image: url(../images/btn_update_total.png);
+  }
+
+button#btn_update:hover {
+  background-position: 0 -25px;
+  }
+
+a.btn_item_remove {
+  background-image: url(../images/btn_remove.png);
+  }
+
+a#added_view_cart {
+  width: 32px;
+  background-image: url(../images/btn_added_view_cart.png);
+  }
+
+
+
+/*============================================================
+ Base Elements
+============================================================*/
+
+#store {
+  position: relative;
+  width: 664px;
+  margin: 0 auto;
+  padding: 0 100px 50px 100px;
+  text-align: left;
+  cursor: default;
+  }
+
+#store a {
+  cursor: pointer;
+  }
+
+#website {
+  position: absolute;
+  left: 0;
+  top: 78px;
+  }
+
+a#website_back {
+  background-color: #eee;
+  }
+
+a#website_back:hover {
+  background-color: #00B8ED;
+  }
+
+#minicart {
+  position: absolute;
+  right: 100px;
+  top: 0;
+  z-index: 10;
+  }
+
+#minicart a {
+  display: block;
+  width: 127px;
+  height: 25px;
+  background: #222;
+  }
+
+#minicart a:hover {
+  background-color: #00B8ED;
+  }
+
+#minicart_count {
+  float: left;
+  height: 13px;
+  margin: 6px 0 0 4px;
+  padding-left: 21px;
+  background: url(../images/icon_cart.png) 0 0 no-repeat;
+  font-size: 9px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 14px;
+  }
+
+#minicart_view {
+  float: right;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 4px 0 0 30px;
+  padding-right: 5px;
+  background: url(../images/btn_view_cart.png) 0 0 no-repeat;
+  text-indent: -5000px;
+  }
+
+#minicart a:hover #minicart_view {
+  background-position: 0 -16px;
+  }
+
+
+
+/*============================================================
+ Header
+============================================================*/
+
+#header {
+  width: 100%;
+  height: 125px;
+  }
+
+#logo {
+  position: absolute;
+  width: 255px;
+  height: 110px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 1;
+  }
+
+#logo a {
+  position: absolute;
+  left: 0;
+  top: 84px;
+  }
+
+#logo.image a {
+  top: auto;
+  bottom: 0;
+  }
+
+#logo.image a img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  }
+
+#logo.image span.store_name {
+  display: none;
+  }
+
+#nav {
+  position: relative;
+  float: right;
+  margin-top: 78px;
+  z-index: 100;
+  }
+
+#nav li {
+  display: block;
+  float: left;
+  padding: 8px 0 8px 10px;
+  margin-left: 10px;
+  border-left: 1px solid #eee;
+  font-size: 12px;
+  font-weight: bold;
+  }
+
+#nav li.first {
+  margin-left: 0;
+  padding-left: 0;
+  border: none;
+  }
+
+#search {
+  position: relative;
+  float: right;
+  width: 127px;
+  margin: 78px 0 0 25px;
+  padding: 6px 0;
+  background: #eee;
+  z-index: 150;
+  }
+
+#search input {
+  float: left;
+  width: 88px;
+  margin: 0 0 0 6px;
+  padding: 2px;
+  font-size: 10px;
+  }
+
+#btn_search {
+  display: inline;
+  float: right;
+  margin: 2px 4px 0 0;
+  }
+
+
+
+/*============================================================
+ Main
+============================================================*/
+
+#main {
+  float: left;
+  position: relative;
+  width: 564px;
+  margin-bottom: 6px;
+  padding: 35px 50px;
+  background: #333;
+  }
+
+html #main {
+  width: 664px;
+  w\idth: 564px;
+  }
+
+
+/* Basic Styles
+------------------------------------------------------------*/
+
+#main a {
+  color: #ccc;
+  border-bottom: 1px dotted #ccc;
+  }
+
+#main a:hover {
+  color: #00B8ED;
+  border-bottom-color: #00B8ED;
+  }
+
+#main h1,
+#main h2,
+#main h3 {
+  color: #fff;
+  }
+
+#main p,
+#main dd,
+#main label,
+#main li {
+  color: #999;
+  }
+
+#main ul,
+#main ol,
+#main blockquote {
+  margin-bottom: 1em;
+  padding: 0 2.5em;
+  }
+
+#main ol {
+  list-style: disc;
+  }
+
+#main ol {
+  list-style: decimal;
+  }
+
+#main blockquote {
+  font-style: italic;
+  }
+
+#main dl {
+  padding-top: 15px;
+  }
+
+#main dt {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #fff;
+  border-top: 1px solid #4b4b4b;
+  }
+
+#main dd {
+  margin-bottom: 20px;
+  }
+
+
+/* Images
+------------------------------------------------------------*/
+
+#main .featured {
+  float: left;
+  width: 306px;
+  height: 306px;
+  margin: 1px;
+  }
+
+#main .general {
+  float: left;
+  width: 181px;
+  height: 181px;
+  }
+
+#main .thumbnail {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin: 1px;
+  }
+
+#main .featured a,
+#main .general a,
+#main .thumbnail a {
+  display: block;
+  border: 3px solid #222;
+  background: #222;
+  overflow: hidden;
+  text-align: center;
+  }
+
+#main .featured a {
+  width: 300px;
+  height: 300px;
+  }
+
+#main .general a {
+  width: 175px;
+  height: 175px;
+  }
+
+#main .thumbnail a {
+  width: 69px;
+  height: 69px;
+  }
+
+#main .featured a img,
+#main .general a img {
+  display: inline;
+  *margin-top: -1px; /*ie*/
+  vertical-align: middle;
+  }
+
+#main .thumbnail a img {
+  display: inline;
+  margin: -3px;
+  vertical-align: middle;
+  }
+
+#main .featured a span.stilt,
+#main .general a span.stilt,
+#main .thumbnail a span.stilt {
+  display:-moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  }
+
+#main .featured a span.stilt {
+  height: 300px;
+  }
+
+#main .general a span.stilt {
+  height: 175px;
+  }
+
+#main .thumbnail a span.stilt {
+  height: 69px;
+  }
+
+#main .general a .product_price span.currency_sign {
+  display: inline;
+  height: auto;
+  vertical-align: top;
+  }
+
+#main .featured a:hover,
+#main .general a:hover {
+  border-color: #00B8ED;
+  background: #00B8ED;
+  }
+
+#main .thumbnail a:hover {
+  width: 71px;
+  height: 71px;
+  border: 2px solid #00B8ED;
+  background: #00B8ED;
+  }
+
+#main .thumbnail a:hover img {
+  margin: -2px;
+  }
+
+#main .thumbnail a:hover span.stilt {
+  height: 71px;
+  }
+
+/*============================================================
+ Footer
+============================================================*/
+
+#footer {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 15px 0 25px 0;
+  background: #eee;
+  }
+
+#footer h4 {
+  margin-bottom: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #666;
+  }
+
+#footer li,
+#footer p {
+  font-size: 11px;
+  line-height: 17px;
+  }
+
+#footer .pod {
+  float: left;
+  display: inline;
+  width: 127px;
+  margin-left: 25px;
+  }
+
+#footer select#artists {
+  width: 127px;
+  }
+
+#footer #pod_rss {
+  width: 152px;
+  }
+
+#footer #pod_rss .link_icon {
+  background-image: url(../images/btn_rss.png);
+  }
+
+a em.link_icon {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  padding-right: 4px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  }
+
+a:hover em.link_icon {
+  background-position: 0 -16px;
+  }
+
+#badge {
+  clear: both;
+  float: left;
+  width: 100%;
+  }
+
+#badge a {
+  float: right;
+  display: block;
+  width: 79px;
+  height: 23px;
+  background: url(../images/badge.png) no-repeat;
+  text-indent: -5000px;
+  }
+
+
+
+/*============================================================
+ Errors
+============================================================*/
+
+#error_noscript {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+#error,
+#error_noscript {
+  margin-bottom: 11px;
+  background: #00B8ED;
+  }
+
+#error ul,
+#error_noscript ul {
+  margin: 0;
+  padding: 7px 0 7px 10px;
+  list-style: none;
+  }
+
+#main #error li,
+#main #error_noscript li {
+  width: 90%;
+  padding-left: 22px;
+  background: url(../images/icon_error.png) 0 1px no-repeat;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  }
+
+#home #error, #home #error_noscript,
+#product #error, #product #error_noscript,
+#cart #error, #cart #error_noscript {
+  width: 614px;
+  margin: -10px -25px 25px -25px;
+  }
+
+
+
+/*============================================================
+ Debris
+============================================================*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
