@@ -1,0 +1,18 @@
+/*============================================================
+ Home
+============================================================*/
+
+#home h1,
+#product h1,
+#cart h1 {
+  display: none;
+  }
+
+ul#home_products {
+  width: 617px;
+  margin: -11px -27px 14px -26px;
+  padding: 0;
+  background: url(../images/home_box.png) repeat;
+  list-style: none;
+  }
+

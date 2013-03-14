@@ -1,0 +1,21 @@
+/*============================================================
+ Maintenance & Checkout
+============================================================*/
+
+body#maintenance #main,
+body#checkout #main {
+  float: none;
+  width: 215px;
+  margin: 125px auto 50px auto;
+  padding: 35px 50px 20px 50px;
+  }
+
+body#maintenance #main h1,
+body#checkout #main h1 {
+  margin-bottom: .5em;
+  }
+
+body#maintenance #main p,
+body#checkout #main p {
+  font-size: 15px;
+  }
