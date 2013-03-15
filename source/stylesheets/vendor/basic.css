@@ -1,0 +1,153 @@
+/*============================================================
+  Basic Styles - used for the simple controls.
+============================================================*/
+
+/* Font */
+body
+{font-family: {{ theme.font | font_family }};}
+
+
+/* Background */
+body {
+  background-color: {{ theme.background }};
+{% if theme.background_image != blank %}
+  background-image: url({{ theme.background_image.url }});
+  background-repeat: repeat;
+{% endif %}
+  }
+
+/* Blocks background */
+a#website_back,
+#search,
+#footer
+{background-color: {{ theme.blocks_background }};}
+#nav li
+{border-left-color: {{ theme.blocks_background }};}
+
+
+/* Blocks links */
+a,
+#main a#keep_shopping,
+#pod_rss p
+{color: {{ theme.blocks_links }};}
+
+
+/* Main block background */
+#main,
+#adding_to_cart,
+#added_to_cart
+{background-color: {{ theme.main_block_background }};}
+#products_extra h3
+{border-bottom-color: {{ theme.main_block_background }};}
+
+
+/* Main block titles */
+#minicart_count,
+#main h1,
+#main h2,
+#main h3,
+#main dt,
+#product_list li a:hover .product_price,
+#product_list li a,
+.pagination span,
+#main .pagination a,
+#main .pagination a:hover,
+#product_info,
+#adding_to_cart h4,
+#added_to_cart h4,
+ul#option li label,
+ul#cart_contents,
+.cart_total h3,
+#contact_form dt label,
+#main #error li,
+#main #error_noscript li,
+#product_inventory h3
+{color: {{ theme.main_block_titles }};}
+
+
+/* Main block text */
+#main p,
+#main dd,
+#main label,
+#main li,
+#main #product_status,
+.pagination span.current,
+.pagination span.yadda,
+#product_inventory .inventory_option,
+.item_total,
+#cart_discount .optional,
+#shipping_entry,
+#discount_entry,
+#shipping_total,
+#discount_total,
+#products_extra h3
+{color: {{ theme.main_block_text }};}
+
+
+/* Main block links */
+#main a
+{color: {{ theme.main_block_links }}; border-bottom-color: {{ theme.main_block_links }};}
+
+
+/* Main block lines */
+#product_inventory li.sold_out .inventory_option,
+#product_inventory span.inventory_sold
+{color: {{ theme.main_block_lines }};}
+#product_description,
+#product_inventory,
+#product_inventory li,
+#contact_form dt,
+#contact_form dd
+{border-top-color: {{ theme.main_block_lines }};}
+#cart_shipping,
+#cart_discount
+{background-color: {{ theme.main_block_lines }};}
+
+
+/* Inner blocks */
+#minicart a,
+#main .featured a,
+#main .general a,
+#main .thumbnail a,
+.product_price,
+#products_extra,
+.pagination span,
+#main .pagination a,
+#cart_contents .item_wrap
+{background-color: {{ theme.inner_blocks }};}
+#main .featured a,
+#main .general a,
+#main .thumbnail a
+{border-color: {{ theme.inner_blocks }};}
+
+
+/* Footer titles */
+#footer h4,
+#footer h4 a
+{color: {{ theme.footer_titles }};}
+
+
+/* Link rollovers */
+a:hover,
+#main a:hover,
+#main a#keep_shopping:hover,
+#footer h4 a:hover
+{color: {{ theme.link_rollovers }};}
+#main a:hover
+{border-bottom-color: {{ theme.link_rollovers }};}
+#main .featured a:hover,
+#main .general a:hover,
+#main .thumbnail a:hover,
+#minicart a:hover,
+a#website_back:hover,
+.product_price span.on_sale,
+#product_inventory .inventory_bar,
+#main .pagination a:hover,
+#error,
+#error_noscript
+{background-color: {{ theme.link_rollovers }};}
+#main .featured a:hover,
+#main .general a:hover,
+#main .thumbnail a:hover
+{border-color: {{ theme.link_rollovers }};}
+
