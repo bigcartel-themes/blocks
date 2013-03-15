@@ -12,7 +12,7 @@ ul#home_products {
   width: 617px;
   margin: -11px -27px 14px -26px;
   padding: 0;
-  background: url(../images/home_box.png) repeat;
+  background: url({{ 'home_box.png' | theme_image_url }}) repeat;
   list-style: none;
   }
 

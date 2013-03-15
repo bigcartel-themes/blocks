@@ -161,7 +161,7 @@ select#country {
 #discount_total {
   font-style: italic;
   }
-  
+
 #discount_total.shipping {
   width: 284px;
   }
@@ -197,4 +197,4 @@ select#country {
   width: 105px;
   padding: 5px 0 10px 0;
   }
-  
+
