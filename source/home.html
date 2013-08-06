@@ -4,7 +4,7 @@
 
 <ul id="home_products" class="clearfix">
 {% for product in products %}
-  {% if forloop.first %}<li class="featured"><a href="{{ product.url }}" title="View {{ product.name | escape }}"><img src="{{ product.image | product_image_url size:"large" }}" alt="Image of {{ product.name | escape }}" /><span class="stilt"></span></a></li>{% else %}<li class="thumbnail"><a href="{{ product.url }}"><img src="{{ product.image | product_image_url size:"thumb" }}"  alt="Image of {{ product.name | escape }}" /><span class="stilt"></span></a></li>{% endif %}
+  {% if forloop.first %}<li class="featured"><a href="{{ product.url }}" title="View {{ product.name | escape }}"><img src="{{ product.image | product_image_url: "large" }}" alt="Image of {{ product.name | escape }}" /><span class="stilt"></span></a></li>{% else %}<li class="thumbnail"><a href="{{ product.url }}"><img src="{{ product.image | product_image_url: "thumb" }}"  alt="Image of {{ product.name | escape }}" /><span class="stilt"></span></a></li>{% endif %}
 {% endfor %}
 </ul>
 

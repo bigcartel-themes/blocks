@@ -4,7 +4,7 @@
   <ul id="cart_contents" class="clearfix">
     {% for item in cart.items %}<li id="item_{{ item.id }}" class="{% cycle 'row', 'row_alt' %}">
       <div class="item_wrap">
-        <div class="thumbnail"><a href="{{ item.product.url }}" title="View {{ item.product.name | escape }}"><img src="{{ item.product.image | product_image_url size:"thumb" }}" /><span class="stilt"></span></a></div>
+        <div class="thumbnail"><a href="{{ item.product.url }}" title="View {{ item.product.name | escape }}"><img src="{{ item.product.image | product_image_url: "thumb" }}" /><span class="stilt"></span></a></div>
         <div class="item_info">
           <h2{% if item.product.has_default_option %} class="optionless"{% endif %}>{{ item.product.name }}</h2>
           {% unless item.product.has_default_option %}<p>{{ item.option.name }}</p>{% endunless %}
