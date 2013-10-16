@@ -1,6 +1,6 @@
 {
   "name": "Blocks",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "images": [
     {
       "variable": "image",
@@ -147,7 +147,7 @@
     "background_color": "{{ background }}",
     "body_font_size": "11px",
     "body_font": "{{ font }}",
-    "title_background_color": "{{ background }}",
+    "title_background_color": "transparent",
     "title_color": "{{ blocks_links }}",
     "title_font_size": "15px",
     "title_font": "{{ font }}",
