@@ -1,6 +1,7 @@
 {% if cart.items != blank %}
 
-<form id="cart_form" method="post" action="/cart">
+<form id="cart_form" method="post" action="/cart" accept-charset="utf8">
+  <input type="hidden" name="utf8" value='✓'>
   <ul id="cart_contents" class="clearfix">
     {% for item in cart.items %}<li id="item_{{ item.id }}" class="{% cycle 'row', 'row_alt' %}">
       <div class="item_wrap">

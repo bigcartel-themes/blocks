@@ -43,7 +43,8 @@
 
       {% if theme.show_search %}
       <div id="search">
-      <form id="search_form" name="search" action="/products" method="get">
+      <form id="search_form" name="search" action="/products" method="get" accept-charset="utf8">
+        <input type="hidden" name="utf8" value='✓'>
         <input id="search_words" class="text" name="search" type="text" />
         <button id="btn_search" class="button" name="btn_search" type="submit" title="Search"><span>Search</span></button>
       </form>
