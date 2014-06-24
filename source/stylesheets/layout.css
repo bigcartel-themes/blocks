@@ -449,14 +449,14 @@ html #main {
   padding: 0 2.5em;
   }
 
-#main ol {
+#main ul {
   list-style: disc;
   }
 
 #main ol {
   list-style: decimal;
   }
-
+  
 #main blockquote {
   font-style: italic;
   }

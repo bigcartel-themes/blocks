@@ -11,7 +11,8 @@
     {% when 'active' %}
 
     <div id="product_form_wrap">
-      <form id="product_form" class="clearfix" method="post" action="/cart">
+      <form id="product_form" class="clearfix" method="post" action="/cart" accept-charset="utf8">
+        <input type="hidden" name="utf8" value='✓'>
 
         {% if product.has_default_option %}
 
