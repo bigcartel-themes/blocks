@@ -1,0 +1,10 @@
+{
+  "store": {
+    "subdomain": "beeteeth"
+  },
+  "customization": {
+    "background": "#336699",
+    "featured_products": 10,
+    "show_top_selling": true
+  }
+}
