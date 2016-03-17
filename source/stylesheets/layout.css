@@ -336,12 +336,17 @@ a#website_back:hover {
 #logo.image a {
   top: auto;
   bottom: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
   }
 
 #logo.image a img {
   position: absolute;
   left: 0;
   bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
   }
 
 #logo.image span.store_name {
